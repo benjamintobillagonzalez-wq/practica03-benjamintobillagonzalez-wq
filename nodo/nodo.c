@@ -8,31 +8,37 @@
 */
 struct Nodo
 {
-    /* TODO */
+    int valor;
 };
 
 
 /* Crear un nodo dinámicamente */
 Nodo* crearNodo(int valor)
 {
-    /* TODO
-       1 Reservar memoria con malloc
-       2 Verificar que la memoria se haya asignado
-       3 Inicializar el valor del nodo
-       4 Regresar el nodo
-    */
+    /* 1 Reservar memoria con malloc */
+    Nodo* nuevo_nodo = (Nodo*)malloc(sizeof(Nodo));
 
-    return NULL;
+    /* 2 Verificar que la memoria se haya asignado */
+    if (nuevo_nodo != NULL)
+    {
+        /* 3 Inicializar el valor del nodo */
+        nuevo_nodo->valor = valor;
+    }
+
+    /* 4 Regresar el nodo */
+    return nuevo_nodo;
 }
 
 
 /* Obtener el valor almacenado */
 int obtenerValor(Nodo* nodo)
 {
-    /* TODO
-       1 Verificar que el nodo no sea NULL
-       2 Regresar el valor almacenado
-    */
+    /* 1 Verificar que el nodo no sea NULL */
+    if (nodo != NULL)
+    {
+        /* 2 Regresar el valor almacenado */
+        return nodo->valor;
+    }
 
     return 0;
 }
@@ -41,17 +47,21 @@ int obtenerValor(Nodo* nodo)
 /* Modificar el valor almacenado */
 void asignarValor(Nodo* nodo, int valor)
 {
-    /* TODO
-       1 Verificar que el nodo no sea NULL
-       2 Asignar el nuevo valor
-    */
+    /* 1 Verificar que el nodo no sea NULL */
+    if (nodo != NULL)
+    {
+        /* 2 Asignar el nuevo valor */
+        nodo->valor = valor;
+    }
 }
 
 
 /* Liberar memoria del nodo */
 void destruirNodo(Nodo* nodo)
 {
-    /* TODO
-       Liberar la memoria usando free
-    */
+    /* Liberar la memoria usando free */
+    if (nodo != NULL)
+    {
+        free(nodo);
+    }
 }
