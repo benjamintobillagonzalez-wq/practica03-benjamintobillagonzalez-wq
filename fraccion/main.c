@@ -3,41 +3,46 @@
 
 int main()
 {
-
     printf("Prueba del TAD Fraccion\n");
 
-    /* TODO
-       1 Crear dos fracciones
+    /* 1 Crear dos fracciones
        ejemplo: 1/2 y 3/4
     */
-    Fraccion* f1 = NULL;
-    Fraccion* f2 = NULL;
+    Fraccion* f1 = crearFraccion(1, 2);
+    Fraccion* f2 = crearFraccion(3, 4);
 
 
     printf("Fraccion 1: ");
-    /* TODO imprimir */
+    /* imprimir */
+    imprimir(f1);
+    printf("\n");
 
 
     printf("Fraccion 2: ");
-    /* TODO imprimir */
+    /* imprimir */
+    imprimir(f2);
+    printf("\n");
 
 
     printf("\nSuma de fracciones:\n");
 
-    /* TODO
-       2 Sumar fracciones
-    */
-    Fraccion* resultado = NULL;
+    /* 2 Sumar fracciones */
+    Fraccion* resultado = sumar(f1, f2);
 
 
-    /* TODO
-       3 Imprimir resultado
-    */
+    /* 3 Imprimir resultado */
+    imprimir(f1);
+    printf(" + ");
+    imprimir(f2);
+    printf(" = ");
+    imprimir(resultado);
+    printf("\n");
 
 
-    /* TODO
-       4 Liberar memoria
-    */
+    /* 4 Liberar memoria */
+    destruir(f1);
+    destruir(f2);
+    destruir(resultado);
 
     return 0;
 }
